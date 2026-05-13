@@ -67,4 +67,21 @@ class SoldeService
         return $result;
     }
 
+    public function getAllEmployeSolde(int $annee){
+        $solde = $this->soldeModel->where('annee', $annee)->findAll();
+
+        $result = [];
+        foreach($solde as $s){
+            $typeConge = $this->typeCongeModel->find($s['type_conge_id']);
+            $result[] = [
+                'employe_id' => $s['employe_id'],
+                'type_conge_' => $typeConge['libelle'],
+                'annee' => $s['annee'],
+                'jour_attribues' => $s['jour_attribues'],
+                'jour_pris' => $s['jour_pris'],
+                'jour_restant' => $s['jour_attribues'] - $s['jour_pris']
+            ];
+        }
+    }
+
 }

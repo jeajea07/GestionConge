@@ -134,6 +134,15 @@ class CongeService
         return $conges;
     }
 
+    public function getAllCongeByEmployeIdAndByStatut(int $employeId, String $statut)
+    {
+        $conges = $this->congeModel->where('employe_id', $employeId)
+            ->where('statut', $statut)
+            ->findAll();
+
+        return $conges;
+    }
+
     // RH
     public function traiterDemandeConge(int $congeId, string $statut, string $commentaire_rh, int $traite_par)
     {
@@ -142,13 +151,6 @@ class CongeService
             'commentaire_rh' => $commentaire_rh,
             'traite_par' => $traite_par
         ]);
-    }
-
-    public function getAllCongeEnAttente()
-    {
-        $conges = $this->congeModel->where('statut', 'en_attente')
-            ->findAll();
-        return $conges;
     }
 
     public function approuverDemandeConge(int $congeId, String $commentaire_rh, int $traite_par)
@@ -183,6 +185,28 @@ class CongeService
         }
 
         $this->traiterDemandeConge($congeId, $statut, $commentaire_rh, $traite_par);
+    }
+
+    public function getAllCongeByStatut(String $statut)
+    {
+        $conges = $this->congeModel->where('statut', $statut)
+            ->findAll();
+        return $conges;
+    }
+
+    public function getAllCongeByDepartementId(int $departementId)
+    {
+        $conges = $this->congeModel->join('employe', 'conge.employe_id = employe.id')
+            ->where('employe.departement_id', $departementId)
+            ->findAll();
+        return $conges;
+    }
+
+    // Admin
+    public function getAllConge()
+    {
+        $conges = $this->congeModel->findAll();
+        return $conges;
     }
 
 }
