@@ -1,4 +1,4 @@
-ERROR - 2026-05-13 06:40:11 --> Error connecting to the database: Error: Class "SQLite3" not found in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:111
+git push origin devERROR - 2026-05-13 06:40:11 --> Error connecting to the database: Error: Class "SQLite3" not found in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:111
 Stack trace:
 #0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
 #1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
@@ -110,3 +110,345 @@ Stack trace:
 #13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(166): CodeIgniter\Boot::runCommand()
 #14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/spark(87): CodeIgniter\Boot::bootSpark()
 #15 {main}
+CRITICAL - 2026-05-13 07:37:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/login.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/AuthController.php(22): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AuthController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php')
+CRITICAL - 2026-05-13 07:38:14 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: CLI, Route: routes]
+in SYSTEMPATH/Filters/Filters.php on line 590.
+ 1 SYSTEMPATH/Filters/Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/Filters/Filters.php(641): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/Commands/Utilities/Routes/FilterFinder.php(58): CodeIgniter\Filters\Filters->enableFilters()
+ 4 SYSTEMPATH/Commands/Utilities/Routes/FilterCollector.php(78): CodeIgniter\Commands\Utilities\Routes\FilterFinder->find()
+ 5 SYSTEMPATH/Commands/Utilities/Routes.php(110): CodeIgniter\Commands\Utilities\Routes\FilterCollector->get()
+ 6 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Utilities\Routes->run()
+ 7 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+ 8 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+ 9 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+10 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-05-13 07:41:12 --> Error connecting to the database: Exception: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:111
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(111): SQLite3->__construct()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#15 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 error: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:118
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2026-05-13 07:41:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLite3]: SQLite3 error: Unable to open database: unable to open database file
+[Method: POST, Route: auth/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+ 7 APPPATH/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AuthController->login()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php')
+ERROR - 2026-05-13 07:41:25 --> Error connecting to the database: Exception: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:111
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(111): SQLite3->__construct()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#15 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 error: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:118
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2026-05-13 07:41:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLite3]: SQLite3 error: Unable to open database: unable to open database file
+[Method: POST, Route: auth/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+ 7 APPPATH/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AuthController->login()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php')
+ERROR - 2026-05-13 07:50:17 --> Error connecting to the database: Exception: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:111
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(111): SQLite3->__construct()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#15 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 error: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:118
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2026-05-13 07:50:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLite3]: SQLite3 error: Unable to open database: unable to open database file
+[Method: POST, Route: auth/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+ 7 APPPATH/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AuthController->login()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php')
+ERROR - 2026-05-13 08:24:52 --> Error connecting to the database: Exception: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:111
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(111): SQLite3->__construct()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#15 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 error: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:118
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2026-05-13 08:24:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLite3]: SQLite3 error: Unable to open database: unable to open database file
+[Method: POST, Route: auth/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+ 7 APPPATH/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AuthController->login()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php')
+ERROR - 2026-05-13 08:25:25 --> Error connecting to the database: Exception: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:111
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(111): SQLite3->__construct()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#15 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 error: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:118
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2026-05-13 08:25:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLite3]: SQLite3 error: Unable to open database: unable to open database file
+[Method: POST, Route: auth/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+ 7 APPPATH/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AuthController->login()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php')
+CRITICAL - 2026-05-13 09:12:21 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\UserModel::getAllWithDepartement
+[Method: GET, Route: admin/employes]
+in SYSTEMPATH/Model.php on line 761.
+ 1 APPPATH/Controllers/Admin/DashboardAdminController.php(192): CodeIgniter\Model->__call()
+ 2 APPPATH/Controllers/Admin/DashboardAdminController.php(29): App\Controllers\Admin\DashboardAdminController->buildEmployeesData()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Admin\DashboardAdminController->employees()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php')
+CRITICAL - 2026-05-13 09:12:23 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\UserModel::getAllWithDepartement
+[Method: GET, Route: admin/employes]
+in SYSTEMPATH/Model.php on line 761.
+ 1 APPPATH/Controllers/Admin/DashboardAdminController.php(192): CodeIgniter\Model->__call()
+ 2 APPPATH/Controllers/Admin/DashboardAdminController.php(29): App\Controllers\Admin\DashboardAdminController->buildEmployeesData()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Admin\DashboardAdminController->employees()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php')
+CRITICAL - 2026-05-13 09:12:34 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\UserModel::getAllWithDepartement
+[Method: GET, Route: admin/employes]
+in SYSTEMPATH/Model.php on line 761.
+ 1 APPPATH/Controllers/Admin/DashboardAdminController.php(192): CodeIgniter\Model->__call()
+ 2 APPPATH/Controllers/Admin/DashboardAdminController.php(29): App\Controllers\Admin\DashboardAdminController->buildEmployeesData()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Admin\DashboardAdminController->employees()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php')
