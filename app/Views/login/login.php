@@ -76,7 +76,7 @@
       </div>
       -->
 
-      <form id="login-form" action="/auth/login" method="POST" novalidate>
+      <form id="login-form" action="/auth/login" method="POST" novalidate autocomplete="off">
         <?= csrf_field() /* CI4 CSRF token — retirez si HTML statique */ ?>
 
         <div class="f-group">
@@ -87,7 +87,10 @@
             name="email"
             class="f-input"
             placeholder="vous@techmada.mg"
-            autocomplete="email"
+            autocomplete="off"
+            autocapitalize="off"
+            autocorrect="off"
+            spellcheck="false"
             required
           />
         </div>
@@ -101,7 +104,7 @@
               name="password"
               class="f-input"
               placeholder="••••••••"
-              autocomplete="current-password"
+              autocomplete="new-password"
               required
             />
             <button type="button" class="toggle-pass" id="toggle-pass" aria-label="Afficher/masquer le mot de passe">

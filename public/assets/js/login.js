@@ -13,33 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const eyeIcon    = document.getElementById('eye-icon');
   const submitBtn  = form?.querySelector('button[type="submit"]');
 
-  // ── 1. Clic sur un role-pill → pré-remplir le formulaire ──
-  document.querySelectorAll('.role-pill').forEach(pill => {
-    pill.addEventListener('click', () => {
-      const email = pill.dataset.email;
-      const pass  = pill.dataset.pass;
-      if (!email || !pass) return;
+  // Vider les champs au chargement pour éviter l'autoremplissage navigateur.
+  if (emailInput) emailInput.value = '';
+  if (passInput) passInput.value = '';
 
-      if (emailInput) emailInput.value = email;
-      if (passInput)  passInput.value  = pass;
-
-      // Retirer la classe error si elle était là
-      emailInput?.classList.remove('error');
-      passInput?.classList.remove('error');
-
-      // Petit flash visuel sur les champs
-      [emailInput, passInput].forEach(el => {
-        if (!el) return;
-        el.classList.add('autofilled');
-        setTimeout(() => el.classList.remove('autofilled'), 600);
-      });
-
-      // Focus sur le bouton submit
-      submitBtn?.focus();
-    });
-  });
-
-  // ── 2. Afficher / masquer le mot de passe ─────────────────
+  // ── 1. Afficher / masquer le mot de passe ─────────────────
   if (toggleBtn && passInput && eyeIcon) {
     toggleBtn.addEventListener('click', () => {
       const isHidden = passInput.type === 'password';
@@ -51,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── 3. Validation légère côté client ──────────────────────
+  // ── 2. Validation légère côté client ──────────────────────
   if (form) {
     form.addEventListener('submit', (e) => {
       let valid = true;
@@ -90,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── 4. Auto-dismiss du flash après 5 s ────────────────────
+  // ── 3. Auto-dismiss du flash après 5 s ────────────────────
   const flash = document.querySelector('.flash-error');
   if (flash) {
     setTimeout(() => {
