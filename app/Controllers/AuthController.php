@@ -15,10 +15,6 @@ class AuthController extends BaseController
 
     public function index()
     {
-        if (session()->get('isLoggedIn')) {
-            return redirect()->to($this->dashboardRoute());
-        }
-
         return view('login/login', [
             'title' => 'Connexion',
         ]);
@@ -67,9 +63,9 @@ class AuthController extends BaseController
         $role ??= session()->get('user_role');
 
         return match ($role) {
-            'admin'  => '/admin/dashboard',
-            'rh'     => '/rh/dashboard',
-            default  => '/employe/dashboard',
+            'admin'  => base_url('admin/dashboard'), 
+            'rh'     => base_url('rh/dashboard'),
+            default  => base_url('employe/dashboard'),
         };
     }
 }

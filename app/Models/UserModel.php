@@ -14,9 +14,7 @@ class UserModel extends Model
         'role', 'departement_id', 'date_embauche', 'actif',
     ];
 
-    protected $useTimestamps = true;
-    protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
+    protected $useTimestamps = false;
 
     protected $validationRules = [
         'nom'    => 'required|min_length[2]|max_length[100]',
@@ -37,11 +35,11 @@ class UserModel extends Model
                      ->where('actif', 1)
                      ->first();
 
-        if (!$user) {
+        if (! $user) {
             return null;
         }
 
-        if (!password_verify($plainPassword, $user['password'])) {
+        if (! password_verify($plainPassword, $user['password'])) {
             return null;
         }
 
@@ -52,28 +50,43 @@ class UserModel extends Model
     {
         return $this->select('employes.*, departements.nom AS departement_nom')
                     ->join('departements', 'departements.id = employes.departement_id', 'left')
-                    ->where('employes.actif', 1)
+                    ->orderBy('employes.actif', 'DESC')
                     ->orderBy('employes.nom', 'ASC')
                     ->findAll();
     }
 
+    public function getByIdWithDepartement(int $id): ?array
+    {
+        return $this->select('employes.*, departements.nom AS departement_nom')
+                    ->join('departements', 'departements.id = employes.departement_id', 'left')
+                    ->where('employes.id', $id)
+                    ->first();
+    }
+
     public function createEmployee(array $data): int|false
     {
-        $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
-        $data['actif']    = 1;
+        if (isset($data['password'])) {
+            $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+        }
+        $data['actif'] = 1;
 
         return $this->insert($data, true);
     }
 
     public function updateEmployee(int $id, array $data): bool
     {
-        if (!empty($data['password'])) {
+        if (! empty($data['password'])) {
             $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
         } else {
             unset($data['password']);
         }
 
-        return $this->update($id, $data);
+        // Bypass model-level validation here because the controller already
+        // validates the payload and the model's unique email rule can block
+        // unchanged emails during updates.
+        return (bool) $this->builder()
+            ->where($this->primaryKey, $id)
+            ->update($data);
     }
 
     public function deactivate(int $id): bool
@@ -86,7 +99,7 @@ class UserModel extends Model
         $allowed = ['nom', 'prenom'];
         $update  = array_intersect_key($data, array_flip($allowed));
 
-        if (!empty($data['new_password'])) {
+        if (! empty($data['new_password'])) {
             $update['password'] = password_hash($data['new_password'], PASSWORD_DEFAULT);
         }
 
