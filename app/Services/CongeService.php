@@ -143,6 +143,15 @@ class CongeService
         return $conges;
     }
 
+    public function get3derniersCongeByEmployeId(int $employeId)
+    {
+        $conges = $this->congeModel->where('employe_id', $employeId)
+            ->orderBy('date_debut', 'DESC')
+            ->findAll(3);
+
+        return $conges;
+    }
+
     // RH
     public function traiterDemandeConge(int $congeId, string $statut, string $commentaire_rh, int $traite_par)
     {
