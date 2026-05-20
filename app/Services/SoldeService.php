@@ -25,7 +25,7 @@ class SoldeService
                                   ->where('annee', $annee)
                                   ->first();
 
-        $restant = $solde['jour_attribues'] - $solde['jour_pris'];      
+        $restant = $solde['jours_attribues'] - $solde['jours_pris'];      
 
         return $restant;
     }
@@ -42,14 +42,15 @@ class SoldeService
             return null;
         }
 
-        $restant = $solde['jour_attribues'] - $solde['jour_pris'];      
+        $restant = $solde['jours_attribues'] - $solde['jours_pris'];      
 
         return [
+            'id' => $solde['id'],
             'employe_id' => $employeId,
             'type_conge_' => $typeConge['libelle'],
             'annee' => $annee,
-            'jour_attribues' => $solde['jour_attribues'],
-            'jour_pris' => $solde['jour_pris'],
+            'jour_attribues' => $solde['jours_attribues'],
+            'jour_pris' => $solde['jours_pris'],
             'jour_restant' => $restant
         ];
     }
@@ -74,14 +75,17 @@ class SoldeService
         foreach($solde as $s){
             $typeConge = $this->typeCongeModel->find($s['type_conge_id']);
             $result[] = [
+                'id' => $s['id'],
                 'employe_id' => $s['employe_id'],
+                'type_conge_id' => $s['type_conge_id'],
                 'type_conge_' => $typeConge['libelle'],
                 'annee' => $s['annee'],
-                'jour_attribues' => $s['jour_attribues'],
-                'jour_pris' => $s['jour_pris'],
-                'jour_restant' => $s['jour_attribues'] - $s['jour_pris']
+                'jour_attribues' => $s['jours_attribues'],
+                'jour_pris' => $s['jours_pris'],
+                'jour_restant' => $s['jours_attribues'] - $s['jours_pris']
             ];
         }
+        return $result;
     }
 
 }

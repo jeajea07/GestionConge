@@ -109,9 +109,24 @@
               <input type="date" name="date_embauche" class="f-input" value="<?= esc(old('date_embauche', $editingEmployee['date_embauche'] ?? date('Y-m-d'))) ?>"/>
             </div>
           </div>
+          
+          <?php if (! $isEditing): ?>
+          <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)">
+            <h4 style="margin-bottom:1rem;color:var(--forest)"><i class="bi bi-calendar-check"></i> Soldes de congés initiaux (<?= date('Y') ?>)</h4>
+            <div class="form-grid-2 form-spaced">
+              <?php foreach ($typesConge as $type): ?>
+                <div class="f-group">
+                  <label class="f-label"><?= esc($type['libelle']) ?></label>
+                  <input type="number" name="solde_<?= $type['id'] ?>" class="f-input" min="0" max="365" value="<?= esc(old('solde_' . $type['id'], '0')) ?>" placeholder="Nombre de jours"/>
+                </div>
+              <?php endforeach; ?>
+            </div>
+          </div>
+          <?php endif; ?>
+
           <div class="flash flash-info">
             <i class="bi bi-info-circle-fill"></i>
-            <span>Les soldes de congés seront initialisés automatiquement selon les types de congé configurés.</span>
+            <span><?= $isEditing ? 'Les soldes de cet employé peuvent être modifiés dans la section "Soldes employés" du menu RH.' : 'Entrez le nombre de jours attribués pour chaque type de congé.' ?></span>
           </div>
           <div class="form-actions">
             <button type="submit" class="btn-forest"><i class="bi <?= $isEditing ? 'bi-check2' : 'bi-plus' ?>"></i> <?= $submitLabel ?></button>

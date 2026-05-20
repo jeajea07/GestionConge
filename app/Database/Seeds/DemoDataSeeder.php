@@ -85,5 +85,61 @@ class DemoDataSeeder extends Seeder
                 $this->db->table('employes')->insert($user);
             }
         }
+
+        // Seed types de conges
+        $typesConge = [
+            [
+                'libelle'      => 'Congé annuel',
+                'jours_annuels' => 30,
+                'deductible'   => 1,
+            ],
+            [
+                'libelle'      => 'Congé maladie',
+                'jours_annuels' => 5,
+                'deductible'   => 0,
+            ],
+            [
+                'libelle'      => 'Congé maternité',
+                'jours_annuels' => 90,
+                'deductible'   => 1,
+            ],
+            [
+                'libelle'      => 'Congé sans solde',
+                'jours_annuels' => 10,
+                'deductible'   => 0,
+            ],
+        ];
+
+        $this->db->table('types_conge')->ignore(true)->insertBatch($typesConge);
+
+        // Seed soldes for all employees
+        $employees = $this->db->table('employes')
+            ->select('id')
+            ->get()
+            ->getResultArray();
+
+        $typesCongeIds = $this->db->table('types_conge')
+            ->select('id')
+            ->get()
+            ->getResultArray();
+
+        $anneeActuelle = date('Y');
+        $soldes = [];
+
+        foreach ($employees as $employee) {
+            foreach ($typesCongeIds as $typeConge) {
+                $soldes[] = [
+                    'employe_id'    => $employee['id'],
+                    'type_conge_id' => $typeConge['id'],
+                    'annee'         => $anneeActuelle,
+                    'jours_attribues' => 30, // 30 jours par défaut
+                    'jours_pris'    => 0,
+                ];
+            }
+        }
+
+        if (!empty($soldes)) {
+            $this->db->table('soldes')->insertBatch($soldes);
+        }
     }
 }
