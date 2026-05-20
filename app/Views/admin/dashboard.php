@@ -36,7 +36,7 @@
   </aside>
 
   <div class="main">
-    <div class="topbar">
+    <div class="topbar" style="margin: 20px;">
       <div>
         <div class="topbar-title">Vue d'ensemble</div>
         <div class="topbar-breadcrumb">Administration</div>
@@ -47,7 +47,7 @@
     </div>
 
     <div class="content">
-      <div class="metrics">
+      <div class="metrics" style="margin: 20px;">
         <div class="metric">
           <div class="metric-top"><div class="metric-icon mi-forest"><i class="bi bi-people"></i></div></div>
           <div class="metric-val"><?= esc((string) $metrics['activeEmployees']) ?></div>
@@ -75,19 +75,19 @@
         </div>
       </div>
 
-      <div class="data-card" style="padding: 24px;">
+      <div class="data-card" style="padding: 24px; margin: 20px;">
         <h3>Congés par mois — <?= date('Y') ?></h3>
         <canvas id="congeChartMois" height="100"></canvas>
       </div>
 
-      <div class="data-card" style="padding: 24px;">
+      <div class="data-card" style="padding: 24px; margin: 20px;">
         <h3>Congés par jour — <?= date('Y') ?></h3>
         <div style="max-width: 400px; margin: 0 auto;">
             <canvas id="congeChartJours"></canvas>
         </div>
       </div>
 
-      <div class="dashboard-grid">
+      <div class="dashboard-grid" style="margin: 20px;">
         <div class="data-card no-gap">
           <div class="data-card-head">
             <h3>Demandes récentes</h3>
@@ -124,7 +124,7 @@
           </table>
         </div>
 
-        <div class="side-stack">
+        <div class="side-stack" style="margin: 20px;">
           <div class="data-card no-gap">
             <div class="data-card-head"><h3><i class="bi bi-person-slash"></i> Absents aujourd'hui</h3></div>
             <div class="absence-list">
