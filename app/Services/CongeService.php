@@ -28,7 +28,7 @@ class CongeService
 
     // Employee
 
-    public function canSendDemandeConge(int $employeId, int $typeCongeId, int $annee, int $nb_jours): bool
+    public function canSendDemandeConge(int $employeId, int $typeCongeId, int $annee, int $nb_jours, DateTime $dateDebut, DateTime $dateFin): bool
     {
         $solde = $this->soldeModel->where('employe_id', $employeId)
             ->where('type_conge_id', $typeCongeId)
@@ -39,15 +39,20 @@ class CongeService
             return false;
         }
 
-        $chevauchement = $this->verifyChevauchementConge($employeId, new DateTime(), new DateTime());
+        $chevauchement = $this->verifyChevauchementConge($employeId, $dateDebut, $dateFin);
 
         if ($chevauchement) {
-            return false;
+            throw new \Exception("Chevauchement detecte pour les dates selectionnees.");
         }
 
         $restant = $this->soldeService->calculerJourRestant($employeId, $typeCongeId, $annee);
 
-        return $restant >= $nb_jours;
+        if ($restant < $nb_jours) {
+            throw new \Exception("Solde insuffisant pour ce type de congé. Jours restants: $restant.");
+
+        }
+
+        return true;
     }
 
     public function verifyChevauchementConge(int $employeId, DateTime $dateDebut, DateTime $dateFin): bool
@@ -69,11 +74,8 @@ class CongeService
 
     public function demanderConge(int $employeId, int $typeCongeId, DateTime $dateDebut, DateTime $dateFin, int $nb_jours, String $motif, String $commentaire_rh, int $traite_par)
     {
-        if (!$this->canSendDemandeConge($employeId, $typeCongeId, (int)$dateDebut->format('Y'), $nb_jours)) {
-            throw new \Exception("Votre demande de conge n'est pas valide.");
-        }
-
-        $this->congeModel->insert([
+        if ($this->canSendDemandeConge($employeId, $typeCongeId, (int)$dateDebut->format('Y'), $nb_jours, $dateDebut, $dateFin)) {
+                    $this->congeModel->insert([
             'employe_id' => $employeId,
             'type_conge_id' => $typeCongeId,
             'date_debut' => $dateDebut->format('Y-m-d'),
@@ -83,6 +85,7 @@ class CongeService
             'commentaire_rh' => $commentaire_rh,
             'traite_par' => $traite_par
         ]);
+        }
     }
 
     public function updateDemandeConge(int $congeId, int $typeCongeId, DateTime $dateDebut, DateTime $dateFin, int $nb_jours, String $motif)
@@ -107,7 +110,7 @@ class CongeService
             $solde = $this->soldeService->getSoldeRestantByEmployeIdAndByTypeCongeId($conge['employe_id'], $conge['type_conge_id'], (int)(new DateTime($conge['date_debut']))->format('Y'));
 
             $this->soldeModel->update($solde['id'], [
-                'jour_pris' => $solde['jour_pris'] - $conge['nb_jours']
+                'jours_pris' => $solde['jour_pris'] - $conge['nb_jours']
             ]);
 
 
@@ -158,39 +161,59 @@ class CongeService
         $this->congeModel->update($congeId, [
             'statut' => $statut,
             'commentaire_rh' => $commentaire_rh,
-            'traite_par' => $traite_par
+            'traite_par' => $traite_par,
+            'created_at' => date('Y-m-d H:i:s')
         ]);
     }
 
     public function approuverDemandeConge(int $congeId, String $commentaire_rh, int $traite_par)
     {
+        $conge = $this->congeModel->find($congeId);
+        if (!$conge) {
+            throw new \Exception('Demande de congé non trouvée.');
+        }
+
+        // Vérifier que le solde existe avant de traiter
+        $solde = $this->soldeService->getSoldeRestantByEmployeIdAndByTypeCongeId(
+            $conge['employe_id'], 
+            $conge['type_conge_id'], 
+            (int)(new DateTime($conge['date_debut']))->format('Y')
+        );
+
+        if (!$solde) {
+            throw new \Exception('Solde non trouvé pour cet employé et ce type de congé.');
+        }
+
+        // Traiter la demande (changer le statut)
         $statut = 'approuvee';
         $this->traiterDemandeConge($congeId, $statut, $commentaire_rh, $traite_par);
 
-        $conge = $this->congeModel->find($congeId);
-
-        $solde = $this->soldeService->getSoldeRestantByEmployeIdAndByTypeCongeId($conge['employe_id'], $conge['type_conge_id'], (int)(new DateTime($conge['date_debut']))->format('Y'));
-
+        // Mettre à jour le solde
         $this->soldeModel->update($solde['id'], [
-            'jour_pris' => $solde['jour_pris'] + $conge['nb_jours']
+            'jours_pris' => $solde['jour_pris'] + $conge['nb_jours']
         ]);
     }
 
     public function refuserDemandeConge(int $congeId, String $commentaire_rh, int $traite_par)
     {
         $conge = $this->congeModel->find($congeId);
+        if (!$conge) {
+            throw new \Exception('Demande de congé non trouvée.');
+        }
+
         $last_statut = $conge['statut'];
         $statut = 'refusee';
 
         if ($last_statut == 'approuvee') {
             $solde = $this->soldeService->getSoldeRestantByEmployeIdAndByTypeCongeId($conge['employe_id'], $conge['type_conge_id'], (int)(new DateTime($conge['date_debut']))->format('Y'));
 
+            if (!$solde) {
+                throw new \Exception('Solde non trouvé pour cet employé et ce type de congé.');
+            }
+
             $this->soldeModel->update($solde['id'], [
-                'jour_pris' => $solde['jour_pris'] - $conge['nb_jours']
+                'jours_pris' => $solde['jour_pris'] - $conge['nb_jours']
             ]);
-
-
-        $this->traiterDemandeConge($congeId, $statut, $commentaire_rh, $traite_par);
         }
 
         $this->traiterDemandeConge($congeId, $statut, $commentaire_rh, $traite_par);
@@ -216,6 +239,16 @@ class CongeService
     {
         $conges = $this->congeModel->findAll();
         return $conges;
+    }
+
+    public function getCongeById(int $congeId)
+    {
+        return $this->congeModel->find($congeId);
+    }
+
+    public function updateConge(int $congeId, array $data)
+    {
+        $this->congeModel->update($congeId, $data);
     }
 
 }

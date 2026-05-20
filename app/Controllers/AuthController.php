@@ -43,6 +43,7 @@ class AuthController extends BaseController
         session()->regenerate(true);
         session()->set([
             'user_id'    => $user['id'],
+            'employe_id' => $user['id'],
             'user_nom'   => $user['nom'] . ' ' . $user['prenom'],
             'user_email' => $user['email'],
             'user_role'  => $user['role'],

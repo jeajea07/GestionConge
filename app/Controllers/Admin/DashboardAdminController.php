@@ -55,7 +55,24 @@ class DashboardAdminController extends BaseController
             'actif'          => 1,
         ];
 
-        $this->userModel->insert($data);
+        $employeId = $this->userModel->insert($data);
+        
+        // Créer les soldes de congés
+        $db = \Config\Database::connect();
+        $typesConge = $db->table('types_conge')->get()->getResultArray();
+        $year = (int) date('Y');
+        
+        $soldeModel = new \App\Models\SoldeModel();
+        foreach ($typesConge as $type) {
+            $soldeData = [
+                'employe_id' => $employeId,
+                'type_conge_id' => $type['id'],
+                'annee' => $year,
+                'jours_attribues' => (int) $this->request->getPost('solde_' . $type['id']) ?? 0,
+                'jours_pris' => 0,
+            ];
+            $soldeModel->insert($soldeData);
+        }
 
         return redirect()->to('/admin/employes')->with('success', 'Employe cree avec succes.');
     }
@@ -209,6 +226,7 @@ class DashboardAdminController extends BaseController
             'activePage'     => 'employees',
             'employes'       => $this->userModel->getAllWithDepartement(),
             'departements'   => $db->table('departements')->get()->getResultArray(),
+            'typesConge'     => $db->table('types_conge')->get()->getResultArray(),
             'annualBalances' => $this->fetchAnnualBalances($db),
             'editingEmployee'=> $editingEmployee,
         ]);
