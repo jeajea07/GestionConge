@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleBtn  = document.getElementById('toggle-pass');
   const eyeIcon    = document.getElementById('eye-icon');
   const submitBtn  = form?.querySelector('button[type="submit"]');
+  const demoAccounts = document.querySelectorAll('.role-pill[data-email][data-pass]');
 
   // Vider les champs au chargement pour éviter l'autoremplissage navigateur.
   if (emailInput) emailInput.value = '';
@@ -29,7 +30,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── 2. Validation légère côté client ──────────────────────
+  // ── 2. Remplir le formulaire depuis un compte demo ────────
+  demoAccounts.forEach(account => {
+    account.addEventListener('click', () => {
+      if (!emailInput || !passInput) return;
+
+      emailInput.value = account.dataset.email || '';
+      passInput.value = account.dataset.pass || '';
+      emailInput.classList.remove('error');
+      passInput.classList.remove('error');
+
+      demoAccounts.forEach(item => item.classList.remove('selected'));
+      account.classList.add('selected');
+      submitBtn?.focus();
+    });
+  });
+
+  // ── 3. Validation légère côté client ──────────────────────
   if (form) {
     form.addEventListener('submit', (e) => {
       let valid = true;
@@ -68,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── 3. Auto-dismiss du flash après 5 s ────────────────────
+  // ── 4. Auto-dismiss du flash après 5 s ────────────────────
   const flash = document.querySelector('.flash-error');
   if (flash) {
     setTimeout(() => {
