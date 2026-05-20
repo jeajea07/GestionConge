@@ -111,6 +111,8 @@
                   $pris = (int) ($demande['jours_pris'] ?? 0);
                   $restant = $attribues - $pris;
                   $isInsufficient = $restant < ($demande['nb_jours'] ?? 0);
+                  $dateDebut = ! empty($demande['date_debut']) ? date('d/m/Y H:i', strtotime($demande['date_debut'])) : '-';
+                  $dateFin = ! empty($demande['date_fin']) ? date('d/m/Y H:i', strtotime($demande['date_fin'])) : '-';
                 ?>
                 <tr>
                   <td>
@@ -123,7 +125,7 @@
                     </div>
                   </td>
                   <td><span class="type-badge <?= esc($typeClass) ?>"><?= esc($typeLabel) ?></span></td>
-                  <td class="td-muted" style="font-size:.8rem"><?= esc($demande['date_debut'] ?? '-') ?> – <?= esc($demande['date_fin'] ?? '-') ?></td>
+                  <td class="td-muted" style="font-size:.8rem"><?= esc($dateDebut) ?> – <?= esc($dateFin) ?></td>
                   <td class="td-mono"><?= esc((string) ($demande['nb_jours'] ?? 0)) ?> j</td>
                   <td>
                     <span style="font-family:'DM Mono',monospace;font-size:.82rem;<?= $isInsufficient ? 'color:var(--warn);font-weight:500' : 'color:var(--success);font-weight:500' ?>"><?= esc((string) $restant) ?> j</span>
@@ -151,11 +153,15 @@
 
       <!-- Carte de confirmation -->
       <?php if ($selectedDemand && $action === 'approve'): ?>
+        <?php
+          $selectedDateDebut = ! empty($selectedDemand['date_debut']) ? date('d/m/Y H:i', strtotime($selectedDemand['date_debut'])) : '-';
+          $selectedDateFin = ! empty($selectedDemand['date_fin']) ? date('d/m/Y H:i', strtotime($selectedDemand['date_fin'])) : '-';
+        ?>
         <div style="margin-top:1.5rem">
           <div class="form-section" style="border-color:var(--success-br);background:var(--success-bg)">
             <h3 style="color:var(--success)"><i class="bi bi-check-circle"></i> Confirmer l'approbation — <?= esc(($selectedDemand['prenom'] ?? '') . ' ' . ($selectedDemand['nom'] ?? '')) ?></h3>
             <div style="font-size:.875rem;color:var(--ink);margin-bottom:1rem">
-              Demande de <strong><?= esc((string) ($selectedDemand['nb_jours'] ?? 0)) ?> jours</strong> du <?= esc($selectedDemand['date_debut'] ?? '') ?> au <?= esc($selectedDemand['date_fin'] ?? '') ?> · Type : <?= esc($selectedDemand['type_libelle'] ?? 'Congé') ?>
+              Demande de <strong><?= esc((string) ($selectedDemand['nb_jours'] ?? 0)) ?> jours</strong> du <?= esc($selectedDateDebut) ?> au <?= esc($selectedDateFin) ?> · Type : <?= esc($selectedDemand['type_libelle'] ?? 'Congé') ?>
             </div>
             <form action="<?= base_url('rh/conges/approve/' . $selectedDemand['id']) ?>" method="post">
               <?= csrf_field() ?>
@@ -171,11 +177,15 @@
           </div>
         </div>
       <?php elseif ($selectedDemand && $action === 'refuse'): ?>
+        <?php
+          $selectedDateDebut = ! empty($selectedDemand['date_debut']) ? date('d/m/Y H:i', strtotime($selectedDemand['date_debut'])) : '-';
+          $selectedDateFin = ! empty($selectedDemand['date_fin']) ? date('d/m/Y H:i', strtotime($selectedDemand['date_fin'])) : '-';
+        ?>
         <div style="margin-top:1.5rem">
           <div class="form-section" style="border-color:var(--danger-br);background:var(--danger-bg)">
             <h3 style="color:var(--danger)"><i class="bi bi-x-circle"></i> Confirmer le refus — <?= esc(($selectedDemand['prenom'] ?? '') . ' ' . ($selectedDemand['nom'] ?? '')) ?></h3>
             <div style="font-size:.875rem;color:var(--ink);margin-bottom:1rem">
-              Demande de <strong><?= esc((string) ($selectedDemand['nb_jours'] ?? 0)) ?> jours</strong> du <?= esc($selectedDemand['date_debut'] ?? '') ?> au <?= esc($selectedDemand['date_fin'] ?? '') ?> · Type : <?= esc($selectedDemand['type_libelle'] ?? 'Congé') ?><br>
+              Demande de <strong><?= esc((string) ($selectedDemand['nb_jours'] ?? 0)) ?> jours</strong> du <?= esc($selectedDateDebut) ?> au <?= esc($selectedDateFin) ?> · Type : <?= esc($selectedDemand['type_libelle'] ?? 'Congé') ?><br>
               <span style="font-size:.8rem;color:var(--muted)">Solde disponible : <?= esc((string) (($selectedDemand['jours_attribues'] ?? 0) - ($selectedDemand['jours_pris'] ?? 0))) ?> jours</span>
             </div>
             <form action="<?= base_url('rh/conges/refuse/' . $selectedDemand['id']) ?>" method="post">

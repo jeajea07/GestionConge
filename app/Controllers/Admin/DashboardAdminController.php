@@ -151,9 +151,9 @@ class DashboardAdminController extends BaseController
 
     private function buildDashboardData(BaseConnection $db): array
     {
-        $today = date('Y-m-d');
-        $monthStart = date('Y-m-01');
-        $monthEnd = date('Y-m-t');
+        $now = date('Y-m-d H:i:s');
+        $monthStart = date('Y-m-01 00:00:00');
+        $monthEnd = date('Y-m-t 23:59:59');
 
         $pendingCount = $db->table('conges')
             ->where('statut', 'en_attente')
@@ -167,8 +167,8 @@ class DashboardAdminController extends BaseController
 
         $absentToday = $db->table('conges')
             ->where('statut', 'approuvee')
-            ->where('date_debut <=', $today)
-            ->where('date_fin >=', $today)
+            ->where('date_debut <=', $now)
+            ->where('date_fin >=', $now)
             ->countAllResults();
 
         $recentRequests = $db->table('conges c')
@@ -185,8 +185,8 @@ class DashboardAdminController extends BaseController
             ->join('employes e', 'e.id = c.employe_id')
             ->join('types_conge t', 't.id = c.type_conge_id', 'left')
             ->where('c.statut', 'approuvee')
-            ->where('c.date_debut <=', $today)
-            ->where('c.date_fin >=', $today)
+            ->where('c.date_debut <=', $now)
+            ->where('c.date_fin >=', $now)
             ->orderBy('c.date_fin', 'ASC')
             ->limit(5)
             ->get()

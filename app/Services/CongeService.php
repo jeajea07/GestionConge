@@ -49,7 +49,6 @@ class CongeService
 
         if ($restant < $nb_jours) {
             throw new \Exception("Solde insuffisant pour ce type de congé. Jours restants: $restant.");
-
         }
 
         return true;
@@ -62,9 +61,10 @@ class CongeService
             ->findAll();
 
         foreach ($conges as $conge) {
-            if (($dateDebut >= new DateTime($conge['date_debut']) && $dateDebut <= new DateTime($conge['date_fin'])) ||
-                ($dateFin >= new DateTime($conge['date_debut']) && $dateFin <= new DateTime($conge['date_fin']))
-            ) {
+            $congeDebut = new DateTime($conge['date_debut']);
+            $congeFin = new DateTime($conge['date_fin']);
+
+            if ($dateDebut <= $congeFin && $dateFin >= $congeDebut) {
                 return true;
             }
         }
@@ -75,16 +75,16 @@ class CongeService
     public function demanderConge(int $employeId, int $typeCongeId, DateTime $dateDebut, DateTime $dateFin, int $nb_jours, String $motif, String $commentaire_rh, int $traite_par)
     {
         if ($this->canSendDemandeConge($employeId, $typeCongeId, (int)$dateDebut->format('Y'), $nb_jours, $dateDebut, $dateFin)) {
-                    $this->congeModel->insert([
-            'employe_id' => $employeId,
-            'type_conge_id' => $typeCongeId,
-            'date_debut' => $dateDebut->format('Y-m-d'),
-            'date_fin' => $dateFin->format('Y-m-d'),
-            'nb_jours' => $nb_jours,
-            'motif' => $motif,
-            'commentaire_rh' => $commentaire_rh,
-            'traite_par' => $traite_par
-        ]);
+            $this->congeModel->insert([
+                'employe_id' => $employeId,
+                'type_conge_id' => $typeCongeId,
+                'date_debut' => $dateDebut->format('Y-m-d H:i:s'),
+                'date_fin' => $dateFin->format('Y-m-d H:i:s'),
+                'nb_jours' => $nb_jours,
+                'motif' => $motif,
+                'commentaire_rh' => $commentaire_rh,
+                'traite_par' => $traite_par
+            ]);
         }
     }
 
@@ -92,8 +92,8 @@ class CongeService
     {
         $this->congeModel->update($congeId, [
             'type_conge_id' => $typeCongeId,
-            'date_debut' => $dateDebut->format('Y-m-d'),
-            'date_fin' => $dateFin->format('Y-m-d'),
+            'date_debut' => $dateDebut->format('Y-m-d H:i:s'),
+            'date_fin' => $dateFin->format('Y-m-d H:i:s'),
             'nb_jours' => $nb_jours,
             'motif' => $motif
         ]);
@@ -155,6 +155,14 @@ class CongeService
         return $conges;
     }
 
+    public function getAllCongeByEmployeIdAndByTypeCongeId(int $employeId, int $typeCongeId)
+    {
+        return $this->congeModel
+            ->where('employe_id', $employeId)
+            ->where('type_conge_id', $typeCongeId)
+            ->findAll();
+    }
+
     // RH
     public function traiterDemandeConge(int $congeId, string $statut, string $commentaire_rh, int $traite_par)
     {
@@ -175,8 +183,8 @@ class CongeService
 
         // Vérifier que le solde existe avant de traiter
         $solde = $this->soldeService->getSoldeRestantByEmployeIdAndByTypeCongeId(
-            $conge['employe_id'], 
-            $conge['type_conge_id'], 
+            $conge['employe_id'],
+            $conge['type_conge_id'],
             (int)(new DateTime($conge['date_debut']))->format('Y')
         );
 
@@ -250,5 +258,4 @@ class CongeService
     {
         $this->congeModel->update($congeId, $data);
     }
-
 }
