@@ -20,11 +20,7 @@
       <div class="sidebar-section">Gestion</div>
       <ul class="sidebar-nav">
         <li><a href="<?= base_url('admin/dashboard') ?>" class="active"><i class="bi bi-speedometer2"></i> Vue d'ensemble</a></li>
-        <li><a href="#"><i class="bi bi-inbox"></i> Toutes les demandes <span class="nav-badge alert"><?= esc((string) $pendingCount) ?></span></a></li>
         <li><a href="<?= base_url('admin/employes') ?>"><i class="bi bi-people"></i> Employés</a></li>
-        <li><a href="#"><i class="bi bi-building"></i> Départements</a></li>
-        <li><a href="#"><i class="bi bi-tags"></i> Types de congé</a></li>
-        <li><a href="#"><i class="bi bi-sliders"></i> Soldes annuels</a></li>
       </ul>
     </div>
     <div class="sidebar-user">
@@ -76,6 +72,18 @@
           <div class="metric-top"><div class="metric-icon mi-red"><i class="bi bi-person-slash"></i></div></div>
           <div class="metric-val"><?= esc((string) $metrics['absentToday']) ?></div>
           <div class="metric-label">Absents aujourd'hui</div>
+        </div>
+      </div>
+
+      <div class="data-card" style="padding: 24px;">
+        <h3>Congés par mois — <?= date('Y') ?></h3>
+        <canvas id="congeChartMois" height="100"></canvas>
+      </div>
+
+      <div class="data-card" style="padding: 24px;">
+        <h3>Congés par jour — <?= date('Y') ?></h3>
+        <div style="max-width: 400px; margin: 0 auto;">
+            <canvas id="congeChartJours"></canvas>
         </div>
       </div>
 
@@ -148,5 +156,14 @@
   </div>
 </div>
 </section>
+
+<script src="<?= base_url('assets/js/chart.min.js') ?>"></script>
+<script>
+  const congeParMois = <?= json_encode($congeParMois) ?>;
+  const congeParJours = <?= json_encode($congeParJours) ?>;
+</script>
+
+<script src="<?= base_url('assets/js/dashboard.js') ?>"></script>
+
 </body>
 </html>

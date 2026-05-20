@@ -138,6 +138,22 @@ class DashboardAdminController extends BaseController
         $monthStart = date('Y-m-01');
         $monthEnd = date('Y-m-t');
 
+        $congeParMois = [];
+        for ($m = 1; $m <= 12; $m++) {
+            $congeParMois[] = $db->table('conges')
+                ->where('STRFTIME("%m", date_debut)', str_pad($m, 2, '0', STR_PAD_LEFT)) 
+                ->where('STRFTIME("%Y", date_debut)', date('Y')) 
+                ->countAllResults();
+        }
+
+        $jours = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+        $congeParJours = [];
+        foreach ([1,2,3,4,5] as $jour){
+            $congeParJours[] = $db->table('conges')
+                ->where('STRFTIME("%w", date_debut)', (String) $jour)
+                ->countAllResults();
+        } 
+
         $pendingCount = $db->table('conges')
             ->where('statut', 'en_attente')
             ->countAllResults();
@@ -196,7 +212,10 @@ class DashboardAdminController extends BaseController
             'recentRequests'    => $recentRequests,
             'absentsToday'      => $absentsToday,
             'criticalBalances'  => $criticalBalances,
+            'congeParMois'      => $congeParMois,
+            'congeParJours'     => $congeParJours,
         ]);
+
     }
 
     private function buildEmployeesData(BaseConnection $db): array

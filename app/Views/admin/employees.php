@@ -24,10 +24,7 @@
       </div>
       <ul class="sidebar-nav sidebar-nav-spaced">
         <li><a href="<?= base_url('admin/dashboard') ?>"><i class="bi bi-speedometer2"></i> Vue d'ensemble</a></li>
-        <li><a href="#"><i class="bi bi-inbox"></i> Toutes les demandes</a></li>
         <li><a href="<?= base_url('admin/employes') ?>" class="active"><i class="bi bi-people"></i> Employés</a></li>
-        <li><a href="#"><i class="bi bi-building"></i> Départements</a></li>
-        <li><a href="#"><i class="bi bi-tags"></i> Types de congé</a></li>
       </ul>
     </div>
     <div class="sidebar-user">
