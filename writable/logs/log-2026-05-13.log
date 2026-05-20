@@ -1,0 +1,1173 @@
+git push origin devERROR - 2026-05-13 06:40:11 --> Error connecting to the database: Error: Class "SQLite3" not found in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:111
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Commands/Database/Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Commands/Database/Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(442): CodeIgniter\CLI\Console->run()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/spark(87): CodeIgniter\Boot::bootSpark()
+#15 {main}
+ERROR - 2026-05-13 06:41:24 --> Error connecting to the database: Error: Class "SQLite3" not found in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:111
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Commands/Database/Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Commands/Database/Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(442): CodeIgniter\CLI\Console->run()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/spark(87): CodeIgniter\Boot::bootSpark()
+#15 {main}
+ERROR - 2026-05-13 06:43:29 --> Error connecting to the database: Exception: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:111
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(111): SQLite3->__construct()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Commands/Database/Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Commands/Database/Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(442): CodeIgniter\CLI\Console->run()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#15 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/spark(87): CodeIgniter\Boot::bootSpark()
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 error: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:118
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Commands/Database/Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Commands/Database/Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(442): CodeIgniter\CLI\Console->run()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/spark(87): CodeIgniter\Boot::bootSpark()
+#15 {main}
+ERROR - 2026-05-13 06:44:33 --> Error connecting to the database: Exception: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:111
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(111): SQLite3->__construct()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Commands/Database/Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Commands/Database/Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(442): CodeIgniter\CLI\Console->run()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#15 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/spark(87): CodeIgniter\Boot::bootSpark()
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 error: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:118
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Commands/Database/Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Commands/Database/Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(442): CodeIgniter\CLI\Console->run()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/spark(87): CodeIgniter\Boot::bootSpark()
+#15 {main}
+CRITICAL - 2026-05-13 07:37:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/login.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/AuthController.php(22): view()
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AuthController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php')
+CRITICAL - 2026-05-13 07:38:14 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: CLI, Route: routes]
+in SYSTEMPATH/Filters/Filters.php on line 590.
+ 1 SYSTEMPATH/Filters/Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/Filters/Filters.php(641): CodeIgniter\Filters\Filters->enableFilter()
+ 3 SYSTEMPATH/Commands/Utilities/Routes/FilterFinder.php(58): CodeIgniter\Filters\Filters->enableFilters()
+ 4 SYSTEMPATH/Commands/Utilities/Routes/FilterCollector.php(78): CodeIgniter\Commands\Utilities\Routes\FilterFinder->find()
+ 5 SYSTEMPATH/Commands/Utilities/Routes.php(110): CodeIgniter\Commands\Utilities\Routes\FilterCollector->get()
+ 6 SYSTEMPATH/CLI/Commands.php(74): CodeIgniter\Commands\Utilities\Routes->run()
+ 7 SYSTEMPATH/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+ 8 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+ 9 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+10 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-05-13 07:41:12 --> Error connecting to the database: Exception: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:111
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(111): SQLite3->__construct()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#15 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 error: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:118
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2026-05-13 07:41:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLite3]: SQLite3 error: Unable to open database: unable to open database file
+[Method: POST, Route: auth/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+ 7 APPPATH/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AuthController->login()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php')
+ERROR - 2026-05-13 07:41:25 --> Error connecting to the database: Exception: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:111
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(111): SQLite3->__construct()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#15 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 error: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:118
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2026-05-13 07:41:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLite3]: SQLite3 error: Unable to open database: unable to open database file
+[Method: POST, Route: auth/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+ 7 APPPATH/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AuthController->login()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php')
+ERROR - 2026-05-13 07:50:17 --> Error connecting to the database: Exception: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:111
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(111): SQLite3->__construct()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#15 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 error: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:118
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2026-05-13 07:50:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLite3]: SQLite3 error: Unable to open database: unable to open database file
+[Method: POST, Route: auth/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+ 7 APPPATH/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AuthController->login()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php')
+ERROR - 2026-05-13 08:24:52 --> Error connecting to the database: Exception: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:111
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(111): SQLite3->__construct()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#15 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 error: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:118
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2026-05-13 08:24:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLite3]: SQLite3 error: Unable to open database: unable to open database file
+[Method: POST, Route: auth/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+ 7 APPPATH/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AuthController->login()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php')
+ERROR - 2026-05-13 08:25:25 --> Error connecting to the database: Exception: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:111
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(111): SQLite3->__construct()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#15 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 error: Unable to open database: unable to open database file in /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php:118
+Stack trace:
+#0 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#1 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+#7 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/app/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+#8 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(951): App\Controllers\AuthController->login()
+#9 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/system/rewrite.php(44): require_once('...')
+#15 {main}
+CRITICAL - 2026-05-13 08:25:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLite3]: SQLite3 error: Unable to open database: unable to open database file
+[Method: POST, Route: auth/login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH/Models/UserModel.php(38): CodeIgniter\BaseModel->first()
+ 7 APPPATH/Controllers/AuthController.php(38): App\Models\UserModel->verifyCredentials()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\AuthController->login()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php')
+CRITICAL - 2026-05-13 09:12:21 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\UserModel::getAllWithDepartement
+[Method: GET, Route: admin/employes]
+in SYSTEMPATH/Model.php on line 761.
+ 1 APPPATH/Controllers/Admin/DashboardAdminController.php(192): CodeIgniter\Model->__call()
+ 2 APPPATH/Controllers/Admin/DashboardAdminController.php(29): App\Controllers\Admin\DashboardAdminController->buildEmployeesData()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Admin\DashboardAdminController->employees()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php')
+CRITICAL - 2026-05-13 09:12:23 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\UserModel::getAllWithDepartement
+[Method: GET, Route: admin/employes]
+in SYSTEMPATH/Model.php on line 761.
+ 1 APPPATH/Controllers/Admin/DashboardAdminController.php(192): CodeIgniter\Model->__call()
+ 2 APPPATH/Controllers/Admin/DashboardAdminController.php(29): App\Controllers\Admin\DashboardAdminController->buildEmployeesData()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Admin\DashboardAdminController->employees()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php')
+CRITICAL - 2026-05-13 09:12:34 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\UserModel::getAllWithDepartement
+[Method: GET, Route: admin/employes]
+in SYSTEMPATH/Model.php on line 761.
+ 1 APPPATH/Controllers/Admin/DashboardAdminController.php(192): CodeIgniter\Model->__call()
+ 2 APPPATH/Controllers/Admin/DashboardAdminController.php(29): App\Controllers\Admin\DashboardAdminController->buildEmployeesData()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Admin\DashboardAdminController->employees()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/home/jeannie/Documents/L2/S4/SI/PROJETS/GestionConge/public/index.php')
+ERROR - 2026-05-13 10:01:43 --> Unable to prepare statement: 1, no such table: conge
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 164.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(164): SQLite3->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = :employe_id:
+ORDER BY `date_debut` DESC
+ LIMIT 3', [...], false)
+ 5 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(3, 0)
+ 7 APPPATH/Services/CongeService.php(150): CodeIgniter\BaseModel->findAll(3)
+ 8 APPPATH/Controllers/Employe/DashboardController.php(20): App\Services\CongeService->get3derniersCongeByEmployeId(3)
+ 9 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:01:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: conge
+[Method: GET, Route: employe/dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 865.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = :employe_id:
+ORDER BY `date_debut` DESC
+ LIMIT 3', [...], false)
+ 2 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(3, 0)
+ 4 APPPATH/Services/CongeService.php(150): CodeIgniter\BaseModel->findAll(3)
+ 5 APPPATH/Controllers/Employe/DashboardController.php(20): App\Services\CongeService->get3derniersCongeByEmployeId(3)
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:01:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: conge
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 174.
+ 1 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = :employe_id:
+ORDER BY `date_debut` DESC
+ LIMIT 3', [...], false)
+ 4 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(3, 0)
+ 6 APPPATH/Services/CongeService.php(150): CodeIgniter\BaseModel->findAll(3)
+ 7 APPPATH/Controllers/Employe/DashboardController.php(20): App\Services\CongeService->get3derniersCongeByEmployeId(3)
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:01:43 --> [Caused by] Exception: Unable to prepare statement: 1, no such table: conge
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 164.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(164): SQLite3->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = :employe_id:
+ORDER BY `date_debut` DESC
+ LIMIT 3', [...], false)
+ 5 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(3, 0)
+ 7 APPPATH/Services/CongeService.php(150): CodeIgniter\BaseModel->findAll(3)
+ 8 APPPATH/Controllers/Employe/DashboardController.php(20): App\Services\CongeService->get3derniersCongeByEmployeId(3)
+ 9 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-05-13 10:03:15 --> Unable to prepare statement: 1, no such table: conge
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 164.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(164): SQLite3->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = :employe_id:
+ORDER BY `date_debut` DESC
+ LIMIT 3', [...], false)
+ 5 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(3, 0)
+ 7 APPPATH/Services/CongeService.php(150): CodeIgniter\BaseModel->findAll(3)
+ 8 APPPATH/Controllers/Employe/DashboardController.php(20): App\Services\CongeService->get3derniersCongeByEmployeId(3)
+ 9 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:03:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: conge
+[Method: GET, Route: employe/dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 865.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = :employe_id:
+ORDER BY `date_debut` DESC
+ LIMIT 3', [...], false)
+ 2 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(3, 0)
+ 4 APPPATH/Services/CongeService.php(150): CodeIgniter\BaseModel->findAll(3)
+ 5 APPPATH/Controllers/Employe/DashboardController.php(20): App\Services\CongeService->get3derniersCongeByEmployeId(3)
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:03:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: conge
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 174.
+ 1 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = :employe_id:
+ORDER BY `date_debut` DESC
+ LIMIT 3', [...], false)
+ 4 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(3, 0)
+ 6 APPPATH/Services/CongeService.php(150): CodeIgniter\BaseModel->findAll(3)
+ 7 APPPATH/Controllers/Employe/DashboardController.php(20): App\Services\CongeService->get3derniersCongeByEmployeId(3)
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:03:15 --> [Caused by] Exception: Unable to prepare statement: 1, no such table: conge
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 164.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(164): SQLite3->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = :employe_id:
+ORDER BY `date_debut` DESC
+ LIMIT 3', [...], false)
+ 5 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(3, 0)
+ 7 APPPATH/Services/CongeService.php(150): CodeIgniter\BaseModel->findAll(3)
+ 8 APPPATH/Controllers/Employe/DashboardController.php(20): App\Services\CongeService->get3derniersCongeByEmployeId(3)
+ 9 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-05-13 10:03:20 --> Unable to prepare statement: 1, no such table: conge
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 164.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(164): SQLite3->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = :employe_id:
+ORDER BY `date_debut` DESC
+ LIMIT 3', [...], false)
+ 5 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(3, 0)
+ 7 APPPATH/Services/CongeService.php(150): CodeIgniter\BaseModel->findAll(3)
+ 8 APPPATH/Controllers/Employe/DashboardController.php(20): App\Services\CongeService->get3derniersCongeByEmployeId(3)
+ 9 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:03:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: conge
+[Method: GET, Route: employe/dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 865.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = :employe_id:
+ORDER BY `date_debut` DESC
+ LIMIT 3', [...], false)
+ 2 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(3, 0)
+ 4 APPPATH/Services/CongeService.php(150): CodeIgniter\BaseModel->findAll(3)
+ 5 APPPATH/Controllers/Employe/DashboardController.php(20): App\Services\CongeService->get3derniersCongeByEmployeId(3)
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:03:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: conge
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 174.
+ 1 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = :employe_id:
+ORDER BY `date_debut` DESC
+ LIMIT 3', [...], false)
+ 4 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(3, 0)
+ 6 APPPATH/Services/CongeService.php(150): CodeIgniter\BaseModel->findAll(3)
+ 7 APPPATH/Controllers/Employe/DashboardController.php(20): App\Services\CongeService->get3derniersCongeByEmployeId(3)
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:03:20 --> [Caused by] Exception: Unable to prepare statement: 1, no such table: conge
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 164.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(164): SQLite3->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = :employe_id:
+ORDER BY `date_debut` DESC
+ LIMIT 3', [...], false)
+ 5 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(3, 0)
+ 7 APPPATH/Services/CongeService.php(150): CodeIgniter\BaseModel->findAll(3)
+ 8 APPPATH/Controllers/Employe/DashboardController.php(20): App\Services\CongeService->get3derniersCongeByEmployeId(3)
+ 9 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-05-13 10:05:17 --> Unable to prepare statement: 1, no such table: conge
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 164.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(164): SQLite3->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = :employe_id:
+ORDER BY `date_debut` DESC
+ LIMIT 3', [...], false)
+ 5 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(3, 0)
+ 7 APPPATH/Services/CongeService.php(150): CodeIgniter\BaseModel->findAll(3)
+ 8 APPPATH/Controllers/Employe/DashboardController.php(20): App\Services\CongeService->get3derniersCongeByEmployeId(3)
+ 9 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:05:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: conge
+[Method: GET, Route: employe/dashboard]
+in SYSTEMPATH/Database/BaseConnection.php on line 865.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = :employe_id:
+ORDER BY `date_debut` DESC
+ LIMIT 3', [...], false)
+ 2 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(3, 0)
+ 4 APPPATH/Services/CongeService.php(150): CodeIgniter\BaseModel->findAll(3)
+ 5 APPPATH/Controllers/Employe/DashboardController.php(20): App\Services\CongeService->get3derniersCongeByEmployeId(3)
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:05:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: conge
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 174.
+ 1 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = :employe_id:
+ORDER BY `date_debut` DESC
+ LIMIT 3', [...], false)
+ 4 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(3, 0)
+ 6 APPPATH/Services/CongeService.php(150): CodeIgniter\BaseModel->findAll(3)
+ 7 APPPATH/Controllers/Employe/DashboardController.php(20): App\Services\CongeService->get3derniersCongeByEmployeId(3)
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:05:17 --> [Caused by] Exception: Unable to prepare statement: 1, no such table: conge
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 164.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(164): SQLite3->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `conge`
+WHERE `employe_id` = 3
+ORDER BY `date_debut` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `conge`
+WHERE `employe_id` = :employe_id:
+ORDER BY `date_debut` DESC
+ LIMIT 3', [...], false)
+ 5 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(3, 0)
+ 7 APPPATH/Services/CongeService.php(150): CodeIgniter\BaseModel->findAll(3)
+ 8 APPPATH/Controllers/Employe/DashboardController.php(20): App\Services\CongeService->get3derniersCongeByEmployeId(3)
+ 9 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+10 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:14:53 --> ErrorException: Undefined array key "jour_attribues"
+[Method: GET, Route: employe/demande]
+in APPPATH/Services/SoldeService.php on line 45.
+ 1 APPPATH/Services/SoldeService.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jour_attribues"', '/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Services/SoldeService.php', 45)
+ 2 APPPATH/Services/SoldeService.php(62): App\Services\SoldeService->getSoldeRestantByEmployeIdAndByTypeCongeId(3, 1, 2026)
+ 3 APPPATH/Controllers/Employe/DashboardController.php(49): App\Services\SoldeService->getAllSoldeRestantByEmployeIdAndByTypeCongeId(3, 2026)
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->showFormDemandeConge()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:14:54 --> ErrorException: Undefined array key "jour_attribues"
+[Method: GET, Route: employe/demande]
+in APPPATH/Services/SoldeService.php on line 45.
+ 1 APPPATH/Services/SoldeService.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jour_attribues"', '/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Services/SoldeService.php', 45)
+ 2 APPPATH/Services/SoldeService.php(62): App\Services\SoldeService->getSoldeRestantByEmployeIdAndByTypeCongeId(3, 1, 2026)
+ 3 APPPATH/Controllers/Employe/DashboardController.php(49): App\Services\SoldeService->getAllSoldeRestantByEmployeIdAndByTypeCongeId(3, 2026)
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->showFormDemandeConge()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:14:55 --> ErrorException: Undefined array key "jour_attribues"
+[Method: GET, Route: employe/dashboard]
+in APPPATH/Services/SoldeService.php on line 45.
+ 1 APPPATH/Services/SoldeService.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jour_attribues"', '/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Services/SoldeService.php', 45)
+ 2 APPPATH/Services/SoldeService.php(62): App\Services\SoldeService->getSoldeRestantByEmployeIdAndByTypeCongeId(3, 1, 2026)
+ 3 APPPATH/Controllers/Employe/DashboardController.php(24): App\Services\SoldeService->getAllSoldeRestantByEmployeIdAndByTypeCongeId(3, 2026)
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:15:01 --> ErrorException: Undefined array key "jour_attribues"
+[Method: GET, Route: employe/dashboard]
+in APPPATH/Services/SoldeService.php on line 45.
+ 1 APPPATH/Services/SoldeService.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jour_attribues"', '/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Services/SoldeService.php', 45)
+ 2 APPPATH/Services/SoldeService.php(62): App\Services\SoldeService->getSoldeRestantByEmployeIdAndByTypeCongeId(3, 1, 2026)
+ 3 APPPATH/Controllers/Employe/DashboardController.php(24): App\Services\SoldeService->getAllSoldeRestantByEmployeIdAndByTypeCongeId(3, 2026)
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:15:10 --> ErrorException: Undefined array key "jour_attribues"
+[Method: GET, Route: employe/dashboard]
+in APPPATH/Services/SoldeService.php on line 45.
+ 1 APPPATH/Services/SoldeService.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jour_attribues"', '/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Services/SoldeService.php', 45)
+ 2 APPPATH/Services/SoldeService.php(62): App\Services\SoldeService->getSoldeRestantByEmployeIdAndByTypeCongeId(3, 1, 2026)
+ 3 APPPATH/Controllers/Employe/DashboardController.php(24): App\Services\SoldeService->getAllSoldeRestantByEmployeIdAndByTypeCongeId(3, 2026)
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:16:20 --> ErrorException: Undefined array key "jour_attribues"
+[Method: GET, Route: employe/dashboard]
+in APPPATH/Services/SoldeService.php on line 45.
+ 1 APPPATH/Services/SoldeService.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jour_attribues"', '/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Services/SoldeService.php', 45)
+ 2 APPPATH/Services/SoldeService.php(62): App\Services\SoldeService->getSoldeRestantByEmployeIdAndByTypeCongeId(3, 1, 2026)
+ 3 APPPATH/Controllers/Employe/DashboardController.php(24): App\Services\SoldeService->getAllSoldeRestantByEmployeIdAndByTypeCongeId(3, 2026)
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:16:36 --> ErrorException: Undefined array key "jour_attribues"
+[Method: GET, Route: employe/dashboard]
+in APPPATH/Services/SoldeService.php on line 45.
+ 1 APPPATH/Services/SoldeService.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jour_attribues"', '/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Services/SoldeService.php', 45)
+ 2 APPPATH/Services/SoldeService.php(62): App\Services\SoldeService->getSoldeRestantByEmployeIdAndByTypeCongeId(3, 1, 2026)
+ 3 APPPATH/Controllers/Employe/DashboardController.php(24): App\Services\SoldeService->getAllSoldeRestantByEmployeIdAndByTypeCongeId(3, 2026)
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:18:06 --> ErrorException: Undefined array key "jour_attribues"
+[Method: GET, Route: employe/dashboard]
+in APPPATH/Services/SoldeService.php on line 45.
+ 1 APPPATH/Services/SoldeService.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jour_attribues"', '/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Services/SoldeService.php', 45)
+ 2 APPPATH/Services/SoldeService.php(62): App\Services\SoldeService->getSoldeRestantByEmployeIdAndByTypeCongeId(3, 1, 2026)
+ 3 APPPATH/Controllers/Employe/DashboardController.php(24): App\Services\SoldeService->getAllSoldeRestantByEmployeIdAndByTypeCongeId(3, 2026)
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:18:07 --> ErrorException: Undefined array key "jour_attribues"
+[Method: GET, Route: employe/dashboard]
+in APPPATH/Services/SoldeService.php on line 45.
+ 1 APPPATH/Services/SoldeService.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jour_attribues"', '/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Services/SoldeService.php', 45)
+ 2 APPPATH/Services/SoldeService.php(62): App\Services\SoldeService->getSoldeRestantByEmployeIdAndByTypeCongeId(3, 1, 2026)
+ 3 APPPATH/Controllers/Employe/DashboardController.php(24): App\Services\SoldeService->getAllSoldeRestantByEmployeIdAndByTypeCongeId(3, 2026)
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 10:18:44 --> ErrorException: Undefined array key "jour_attribues"
+[Method: GET, Route: employe/dashboard]
+in APPPATH/Services/SoldeService.php on line 45.
+ 1 APPPATH/Services/SoldeService.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jour_attribues"', '/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Services/SoldeService.php', 45)
+ 2 APPPATH/Services/SoldeService.php(62): App\Services\SoldeService->getSoldeRestantByEmployeIdAndByTypeCongeId(3, 1, 2026)
+ 3 APPPATH/Controllers/Employe/DashboardController.php(24): App\Services\SoldeService->getAllSoldeRestantByEmployeIdAndByTypeCongeId(3, 2026)
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Employe\DashboardController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Employe\DashboardController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 15:39:47 --> ErrorException: Undefined property: CodeIgniter\View\View::$request
+[Method: GET, Route: rh/dashboard]
+in APPPATH/Views/rh/dashboard.php on line 154.
+ 1 APPPATH/Views/rh/dashboard.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', '/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Views/rh/dashboard.php', 154)
+ 2 SYSTEMPATH/View/View.php(240): include('/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Views/rh/dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('rh/dashboard', [], true)
+ 5 APPPATH/Controllers/RH/DashboardController.php(60): view('rh/dashboard', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RH\DashboardController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RH\DashboardController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 15:39:49 --> ErrorException: Undefined property: CodeIgniter\View\View::$request
+[Method: GET, Route: rh/dashboard]
+in APPPATH/Views/rh/dashboard.php on line 154.
+ 1 APPPATH/Views/rh/dashboard.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', '/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Views/rh/dashboard.php', 154)
+ 2 SYSTEMPATH/View/View.php(240): include('/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Views/rh/dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('rh/dashboard', [], true)
+ 5 APPPATH/Controllers/RH/DashboardController.php(60): view('rh/dashboard', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RH\DashboardController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RH\DashboardController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 15:39:54 --> ErrorException: Undefined property: CodeIgniter\View\View::$request
+[Method: GET, Route: rh/dashboard]
+in APPPATH/Views/rh/dashboard.php on line 154.
+ 1 APPPATH/Views/rh/dashboard.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', '/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Views/rh/dashboard.php', 154)
+ 2 SYSTEMPATH/View/View.php(240): include('/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Views/rh/dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('rh/dashboard', [], true)
+ 5 APPPATH/Controllers/RH/DashboardController.php(60): view('rh/dashboard', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RH\DashboardController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RH\DashboardController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 15:40:58 --> ErrorException: Undefined property: CodeIgniter\View\View::$request
+[Method: GET, Route: rh/dashboard]
+in APPPATH/Views/rh/dashboard.php on line 154.
+ 1 APPPATH/Views/rh/dashboard.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', '/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Views/rh/dashboard.php', 154)
+ 2 SYSTEMPATH/View/View.php(240): include('/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Views/rh/dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('rh/dashboard', [], true)
+ 5 APPPATH/Controllers/RH/DashboardController.php(74): view('rh/dashboard', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RH\DashboardController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RH\DashboardController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 15:40:59 --> ErrorException: Undefined property: CodeIgniter\View\View::$request
+[Method: GET, Route: rh/dashboard]
+in APPPATH/Views/rh/dashboard.php on line 154.
+ 1 APPPATH/Views/rh/dashboard.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', '/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Views/rh/dashboard.php', 154)
+ 2 SYSTEMPATH/View/View.php(240): include('/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Views/rh/dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('rh/dashboard', [], true)
+ 5 APPPATH/Controllers/RH/DashboardController.php(74): view('rh/dashboard', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RH\DashboardController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RH\DashboardController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 15:54:07 --> ErrorException: Undefined variable $selectedDept
+[Method: GET, Route: rh/historique]
+in APPPATH/Views/rh/historique.php on line 24.
+ 1 APPPATH/Views/rh/historique.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $selectedDept', '/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Views/rh/historique.php', 24)
+ 2 SYSTEMPATH/View/View.php(240): include('/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Views/rh/historique.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('rh/historique', [], true)
+ 5 APPPATH/Controllers/RH/DashboardController.php(167): view('rh/historique', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RH\DashboardController->historique()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RH\DashboardController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 15:54:36 --> ErrorException: Undefined variable $selectedDept
+[Method: GET, Route: rh/historique]
+in APPPATH/Views/rh/historique.php on line 24.
+ 1 APPPATH/Views/rh/historique.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $selectedDept', '/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Views/rh/historique.php', 24)
+ 2 SYSTEMPATH/View/View.php(240): include('/home/noraa/Fianarana/L2 ITU/BdD Obj/TP Using CodeIgniter 4/Work/GestionConge/app/Views/rh/historique.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('rh/historique', [], true)
+ 5 APPPATH/Controllers/RH/DashboardController.php(167): view('rh/historique', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RH\DashboardController->historique()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RH\DashboardController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 15:55:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Layouts/dashboard.php"
+[Method: GET, Route: rh/historique]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Layouts/dashboard.php')
+ 2 SYSTEMPATH/View/View.php(256): CodeIgniter\View\View->render('Layouts/dashboard', [], true)
+ 3 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('rh/historique', [], true)
+ 4 APPPATH/Controllers/RH/DashboardController.php(167): view('rh/historique', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RH\DashboardController->historique()
+ 6 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RH\DashboardController))
+ 7 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 15:55:48 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Layouts/dashboard.php"
+[Method: GET, Route: rh/historique]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Layouts/dashboard.php')
+ 2 SYSTEMPATH/View/View.php(256): CodeIgniter\View\View->render('Layouts/dashboard', [], true)
+ 3 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('rh/historique', [], true)
+ 4 APPPATH/Controllers/RH/DashboardController.php(167): view('rh/historique', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RH\DashboardController->historique()
+ 6 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RH\DashboardController))
+ 7 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 15:55:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Layouts/dashboard.php"
+[Method: GET, Route: rh/historique]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Layouts/dashboard.php')
+ 2 SYSTEMPATH/View/View.php(256): CodeIgniter\View\View->render('Layouts/dashboard', [], true)
+ 3 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('rh/historique', [], true)
+ 4 APPPATH/Controllers/RH/DashboardController.php(167): view('rh/historique', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RH\DashboardController->historique()
+ 6 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RH\DashboardController))
+ 7 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 15:56:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Layouts/dashboard.php"
+[Method: GET, Route: rh/historique]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Layouts/dashboard.php')
+ 2 SYSTEMPATH/View/View.php(256): CodeIgniter\View\View->render('Layouts/dashboard', [], true)
+ 3 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('rh/historique', [], true)
+ 4 APPPATH/Controllers/RH/DashboardController.php(167): view('rh/historique', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RH\DashboardController->historique()
+ 6 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RH\DashboardController))
+ 7 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-13 15:56:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Layouts/dashboard.php"
+[Method: GET, Route: rh/historique]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Layouts/dashboard.php')
+ 2 SYSTEMPATH/View/View.php(256): CodeIgniter\View\View->render('Layouts/dashboard', [], true)
+ 3 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('rh/historique', [], true)
+ 4 APPPATH/Controllers/RH/DashboardController.php(167): view('rh/historique', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\RH\DashboardController->historique()
+ 6 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RH\DashboardController))
+ 7 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
