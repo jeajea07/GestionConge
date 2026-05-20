@@ -99,6 +99,8 @@
                   $pris = (int) ($demande['jours_pris'] ?? 0);
                   $restant = $attribues - $pris;
                   $isInsufficient = $restant < ($demande['nb_jours'] ?? 0);
+                  $dateDebut = ! empty($demande['date_debut']) ? date('d/m/Y H:i', strtotime($demande['date_debut'])) : '-';
+                  $dateFin = ! empty($demande['date_fin']) ? date('d/m/Y H:i', strtotime($demande['date_fin'])) : '-';
                 ?>
                 <tr>
                   <td>
@@ -111,7 +113,7 @@
                     </div>
                   </td>
                   <td><span class="type-badge <?= esc($typeClass) ?>"><?= esc($typeLabel) ?></span></td>
-                  <td class="td-muted" style="font-size:.8rem"><?= esc($demande['date_debut'] ?? '-') ?> – <?= esc($demande['date_fin'] ?? '-') ?></td>
+                  <td class="td-muted" style="font-size:.8rem"><?= esc($dateDebut) ?> – <?= esc($dateFin) ?></td>
                   <td class="td-mono"><?= esc((string) ($demande['nb_jours'] ?? 0)) ?> j</td>
                   <td>
                     <span style="font-family:'DM Mono',monospace;font-size:.82rem;<?= $isInsufficient ? 'color:var(--warn);font-weight:500' : 'color:var(--success);font-weight:500' ?>"><?= esc((string) $restant) ?> j</span>

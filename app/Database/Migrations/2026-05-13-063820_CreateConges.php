@@ -24,11 +24,11 @@ class CreateConges extends Migration
             ],
 
             'date_debut' => [
-                'type' => 'DATE',
+                'type' => 'DATETIME',
             ],
 
             'date_fin' => [
-                'type' => 'DATE',
+                'type' => 'DATETIME',
             ],
 
             'nb_jours' => [

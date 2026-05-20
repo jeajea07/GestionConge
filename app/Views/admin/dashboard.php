@@ -122,12 +122,15 @@
             <div class="absence-list">
               <?php if (! empty($absentsToday)): ?>
                 <?php foreach ($absentsToday as $absence): ?>
-                  <?php $initials = strtoupper(substr($absence['nom'] ?? '?', 0, 1) . substr($absence['prenom'] ?? '?', 0, 1)); ?>
+                  <?php
+                    $initials = strtoupper(substr($absence['nom'] ?? '?', 0, 1) . substr($absence['prenom'] ?? '?', 0, 1));
+                    $dateRetour = ! empty($absence['date_fin']) ? date('d/m/Y H:i', strtotime($absence['date_fin'])) : '-';
+                  ?>
                   <div class="absence-item">
                     <div class="avatar av-green avatar-sm"><?= esc($initials) ?></div>
                     <div>
                       <div class="absence-name"><?= esc(($absence['prenom'] ?? '') . ' ' . ($absence['nom'] ?? '')) ?></div>
-                      <div class="absence-meta"><?= esc($absence['libelle'] ?? 'Congé') ?> · retour <?= esc($absence['date_fin'] ?? '-') ?></div>
+                      <div class="absence-meta"><?= esc($absence['libelle'] ?? 'Congé') ?> · retour <?= esc($dateRetour) ?></div>
                     </div>
                   </div>
                 <?php endforeach; ?>

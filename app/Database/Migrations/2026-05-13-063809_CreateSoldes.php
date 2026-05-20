@@ -1,5 +1,4 @@
-git checkout dev<?php
-
+<?php
 namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;

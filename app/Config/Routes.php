@@ -24,6 +24,7 @@ $routes->group('employe', ['filter' => 'auth:employe'], function($routes) {
     $routes->post('demande', 'Employe\DashboardController::storeDemandeConge');
     $routes->get('conges', 'Employe\DashboardController::showHistoriqueConge');
     $routes->post('conges/cancel/(:num)', 'Employe\DashboardController::cancelDemandeConge/$1');
+    $routes->get('calendar', 'Employe\DashboardController::showCalendar');
 });
 
 $routes->group('rh', ['filter' => 'auth:rh'], function($routes) {

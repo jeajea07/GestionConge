@@ -23,6 +23,7 @@
           <li><a href="<?= base_url('employe/dashboard') ?>" class="active"><i class="bi bi-grid-1x2"></i> Tableau de bord</a></li>
           <li><a href="<?= base_url('employe/demande') ?>"><i class="bi bi-plus-circle"></i> Nouvelle demande</a></li>
           <li><a href="<?= base_url('employe/conges') ?>"><i class="bi bi-calendar3"></i> Mes demandes</a></li>
+          <li><a href="<?= base_url('employe/calendar') ?>"><i class="bi bi-calendar3"></i> Calendrier</a></li>
           <li><a href="#"><i class="bi bi-person"></i> Mon profil</a></li>
         </ul>
         <div class="sidebar-user">
@@ -209,11 +210,13 @@
                       'annulee' => 's-annulee',
                       default => 's-attente'
                     };
+                    $dateDebut = ! empty($conge['date_debut']) ? date('d/m/Y H:i', strtotime($conge['date_debut'])) : '-';
+                    $dateFin = ! empty($conge['date_fin']) ? date('d/m/Y H:i', strtotime($conge['date_fin'])) : '-';
                     ?>
                     <tr>
                       <td><span class="type-badge <?= esc($typeClass) ?>"><?= esc($typeLabel) ?></span></td>
-                      <td class="td-muted"><?= esc($conge['date_debut'] ?? '-') ?></td>
-                      <td class="td-muted"><?= esc($conge['date_fin'] ?? '-') ?></td>
+                      <td class="td-muted"><?= esc($dateDebut) ?></td>
+                      <td class="td-muted"><?= esc($dateFin) ?></td>
                       <td class="td-mono"><?= esc((string) ($conge['nb_jours'] ?? 0)) ?> j</td>
                       <td><span class="statut <?= esc($statutClass) ?>"><?= esc(str_replace('_', ' ', $statut)) ?></span></td>
                       <td>

@@ -9,6 +9,26 @@ use App\Controllers\BaseController;
 
 class DashboardController extends BaseController
 {
+    private function parseLocalDateTime(string $value): \DateTime
+    {
+        $date = \DateTime::createFromFormat('Y-m-d\TH:i', $value);
+        $errors = \DateTime::getLastErrors();
+
+        if (! $date || ($errors !== false && ($errors['warning_count'] > 0 || $errors['error_count'] > 0))) {
+            throw new \InvalidArgumentException('Format de date invalide.');
+        }
+
+        return $date;
+    }
+
+    private function countInclusiveLocalDays(\DateTime $dateDebut, \DateTime $dateFin): int
+    {
+        $debut = (clone $dateDebut)->setTime(0, 0, 0);
+        $fin = (clone $dateFin)->setTime(0, 0, 0);
+
+        return $debut->diff($fin)->days + 1;
+    }
+
     public function index(){
         $congeService = new CongeService();
         $soldeService = new SoldeService();
@@ -73,20 +93,30 @@ class DashboardController extends BaseController
         $motif = $this->request->getPost('motif') ?? '';
 
         if (!$typeCongeId || !$dateDebut || !$dateFin) {
-            return redirect()->back()->with('error', 'Veuillez remplir tous les champs obligatoires.');
+            return redirect()->back()
+                ->withInput()
+                ->with('error', 'Veuillez remplir tous les champs obligatoires.');
         }
 
         try {
-            $dateDebutObj = new \DateTime($dateDebut);
-            $dateFinObj = new \DateTime($dateFin);
-            $interval = $dateDebutObj->diff($dateFinObj);
-            $nbJours = $interval->days + 1;
+            $dateDebutObj = $this->parseLocalDateTime($dateDebut);
+            $dateFinObj = $this->parseLocalDateTime($dateFin);
+
+            if ($dateFinObj < $dateDebutObj) {
+                return redirect()->back()
+                    ->withInput()
+                    ->with('error', 'La date de fin doit être supérieure ou égale à la date de début.');
+            }
+
+            $nbJours = $this->countInclusiveLocalDays($dateDebutObj, $dateFinObj);
 
             $congeService->demanderConge($employeId, $typeCongeId, $dateDebutObj, $dateFinObj, $nbJours, $motif, '', $employeId);
 
             return redirect()->to('employe/conges')->with('success', 'Votre demande de congé a été enregistrée.');
         } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Erreur: ' . $e->getMessage());
+            return redirect()->back()
+                ->withInput()
+                ->with('error', 'Erreur: ' . $e->getMessage());
         }
     }
 
@@ -143,6 +173,26 @@ class DashboardController extends BaseController
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Erreur: ' . $e->getMessage());
         }
+    }
+
+    public function showCalendar(){
+        $congeService = new CongeService();
+        $employeId = session()->get('user_id') ?? session()->get('employe_id');
+
+        $conges = $congeService->getAllCongeByEmployeIdAndByStatut($employeId, 'approuvee');
+
+        $events = [];
+        foreach ($conges as $conge) {
+            $events[] = [
+                'title' => 'Congé: ' . ($conge['motif'] ?? 'Sans motif'),
+                'start' => (new \DateTime($conge['date_debut']))->format('Y-m-d\TH:i:s'),
+                'end' => (new \DateTime($conge['date_fin']))->format('Y-m-d\TH:i:s'),
+            ];
+        }
+
+        return view('employe/calendar', [
+            'events' => $events
+        ]);
     }
 
 }

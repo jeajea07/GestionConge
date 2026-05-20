@@ -61,9 +61,10 @@ class CongeService
             ->findAll();
 
         foreach ($conges as $conge) {
-            if (($dateDebut >= new DateTime($conge['date_debut']) && $dateDebut <= new DateTime($conge['date_fin'])) ||
-                ($dateFin >= new DateTime($conge['date_debut']) && $dateFin <= new DateTime($conge['date_fin']))
-            ) {
+            $congeDebut = new DateTime($conge['date_debut']);
+            $congeFin = new DateTime($conge['date_fin']);
+
+            if ($dateDebut <= $congeFin && $dateFin >= $congeDebut) {
                 return true;
             }
         }
@@ -77,8 +78,8 @@ class CongeService
             $this->congeModel->insert([
                 'employe_id' => $employeId,
                 'type_conge_id' => $typeCongeId,
-                'date_debut' => $dateDebut->format('Y-m-d'),
-                'date_fin' => $dateFin->format('Y-m-d'),
+                'date_debut' => $dateDebut->format('Y-m-d H:i:s'),
+                'date_fin' => $dateFin->format('Y-m-d H:i:s'),
                 'nb_jours' => $nb_jours,
                 'motif' => $motif,
                 'commentaire_rh' => $commentaire_rh,
@@ -91,8 +92,8 @@ class CongeService
     {
         $this->congeModel->update($congeId, [
             'type_conge_id' => $typeCongeId,
-            'date_debut' => $dateDebut->format('Y-m-d'),
-            'date_fin' => $dateFin->format('Y-m-d'),
+            'date_debut' => $dateDebut->format('Y-m-d H:i:s'),
+            'date_fin' => $dateFin->format('Y-m-d H:i:s'),
             'nb_jours' => $nb_jours,
             'motif' => $motif
         ]);
