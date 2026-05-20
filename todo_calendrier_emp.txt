@@ -1,0 +1,5 @@
+affichage de calendrier sous forme de calendrier hebdomadaire interactif
+
+nombre total de demande de conge par typde de conge
+-> manamboatra fonction getAllDemandeConge(); OK
+-> manamboatra fonction getAllDemandeCongeParType(); OK

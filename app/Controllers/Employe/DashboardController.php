@@ -28,12 +28,18 @@ class DashboardController extends BaseController
             $typeMap[$type['id']] = $type;
         }
 
+        $type_conge = $typeCongeService->getAllTypeConge();
+        $demande_par_type_conge = [];
+        foreach ($type_conge as $type) {
+            $demande_par_type_conge[$type['id']] = $congeService->getAllCongeByEmployeIdAndByTypeCongeId($employeId, $type['id']);
+        }
 
         return view('employe/dashboard', [
             'conges' => $conges,
             'count_conge_en_attente' => count($conge_en_attente),
             'count_conge_approuvee' => count($conge_approuvee),
             'count_conge_refusee' => count($conge_refusee),
+            'demande_par_type_conge' => $demande_par_type_conge,
             'soldes' => $soldes,
             'type_map' => $typeMap
         ]);
