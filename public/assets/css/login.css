@@ -176,6 +176,10 @@ body {
   border-color: rgba(255,255,255,.2);
   transform: translateX(3px);
 }
+.role-pill.selected {
+  background: rgba(212,237,224,.16);
+  border-color: rgba(212,237,224,.45);
+}
 .role-pill:active { transform: translateX(1px); }
 
 .role-pill > .bi {
